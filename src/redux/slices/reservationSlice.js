@@ -13,6 +13,8 @@ export const reservationsSlice = createSlice({
     },
     removeReservation: (state, action) => {
       state.value.splice(action.payload, 1);
+      //We can also do the following
+      /* state.value = state.value.filter((reservation) => reservation.id !== action.payload.id) */
     },
   },
 });
